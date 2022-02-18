@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/about.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Web3 World Championship</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="../index.html"><img src="../resources/images/w3wc-logo-white.png" alt="" class="logoimg"></a>
+        </div>
+        <div class="links">
+            <a href="../index.html" class="nav-link">Tracks</a>
+            <a href="../index.html" class="nav-link">Prizes</a>
+            <a href="../index.html" class="nav-link">Opportunities</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="signup.html"><button type="submit" class="border-button">Sign Up</button></a>
+        </div>
+    </div>
+    <div class="mobile-navbar" id="navbar">
+        <div class="logo noshow">
+            <a href="../index.html"><img src="../resources/images/w3wc-logo-white.png" alt="" class="logoimg"></a>
+            <button class="hamburger" onclick="mobileopen()"><i class="ri-menu-line"></i></button>
+            <button class="hamburger-close noshow" onclick="mobileclose()"><i class="ri-close-fill"></i></button>
+        </div>
+
+        <ul class="links noshow">
+            <li><a href="../index.html" class="nav-link" onclick="mobileclose()">Tracks</a></li>
+            <li><a href="../index.html" class="nav-link" onclick="mobileclose()">Prizes</a></li>
+            <li><a href="../index.html" class="nav-link" onclick="mobileclose()">Opportunities</a></li>
+            <li><a href="about.html" class="nav-link" onclick="mobileclose()">About</a></li>
+            <li><a href="signup.html"><button type="submit" class="border-button" onclick="mobileclose()">Sign
+                        Up</button></a></li>
+            <ul>
+    </div>
+
+    <div class="container">
+        <div class="banner">
+            <div class="line"></div>
+            <img src="../resources/images/sign-up-logo.png" alt="" srcset="" class="backimg" />
+        </div>
+        <h1 class="main-heading">About<br> Nervos Network</h1>
+        <div class="info">
+            <p>
+                The Nervos Network is a cutting-edge, multilayer public blockchain
+                network designed to enable multi-chain interoperability while solving
+                the blockchain trilemma (decentralization, scalability, and security).
+            </p>
+            <p>
+                Nervos Network's foundational Layer 1, stores digital assets with the
+                $CKB token and provides arbitration for upper-level layers, all built
+                on a flexible and powerful UTXO model.
+            </p>
+            <p>
+                It’s first Layer 2 features an EVM-compatible platform, Godwoken,
+                built on top of an optimistic roll-up was released in 2021. Godwoken
+                offers developers EVM support with lower fees and faster transactions
+                while benefiting from L1 security.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- <div class="social-icons">
+            <a href="" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a href="" target="_blank"><i class="ri-twitter-fill"></i></a>
+            <a href="" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+        </div> -->
+        <p class="madeby">Designed by <a href="https://elcicneha.com">Elcicneha</a></p>
+    </footer>
+    <script>
+        navbar = document.getElementById("navbar");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+                navbar.style.display = "none";
+            } else {
+
+                navbar.style.display = "block";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        function mobileopen() {
+            $('.hamburger').addClass('noshow');
+            $('.hamburger-close').removeClass('noshow');
+            $('.mobile-navbar').addClass('fullheight');
+            $('.mobile-navbar').addClass('color');
+            $('ul').removeClass('noshow');
+            $('ul').addClass('show');
+        }
+        function mobileclose() {
+            $('.hamburger').removeClass('noshow');
+            $('.hamburger-close').addClass('noshow');
+            $('ul').removeClass('show');
+            $('ul').addClass('noshow');
+            $('.mobile-navbar').removeClass('fullheight');
+            $('.mobile-navbar').removeClass('color');
+        }
+    </script>
+</body>
+
+</html>
